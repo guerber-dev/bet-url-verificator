@@ -14,20 +14,20 @@ export function Home() {
 		await checkDomain(input)
 	}
 
-	const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
-		ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
-	}
+	// const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
+	// 	ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
+	// }
 
 	return (
-		<div className="min-h-screen font-sans text-gray-900 bg-white">
+		<div className="min-h-screen font-sans text-gray-900 bg-white/90">
 			<header className="w-full sticky top-0 bg-white/90 backdrop-blur-sm z-30 border-b">
 				<div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
 					<img src="/logo.png" alt="VerificaBet" className="h-20 w-auto" />
-					<nav className="space-x-3 text-sm">
+					{/* <nav className="space-x-3 text-sm">
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(aboutRef)}>Sobre</button>
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(howRef)}>Como usar</button>
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(contactRef)}>Contato</button>
-					</nav>
+					</nav> */}
 				</div>
 			</header>
 
@@ -62,7 +62,11 @@ export function Home() {
 
 				<section ref={aboutRef} className="mb-8" aria-labelledby="about">
 					<h2 id="about" className="text-xl font-semibold mb-2">Sobre</h2>
-					<p className="text-gray-700">Te ajudamos a identificar se o link que você recebeu pertence a uma casa de apostas legalizada no Brasil ou se pode ser suspeito.</p>
+					<p className="text-gray-700">
+					<p>🎯 <strong>Sabe aquele link daquela plataforma “bugada que tá pagando muito fácil”?</strong><br/><br/>💸 Pois é... pode ser golpe! 😬</p><br/>
+						<p>No <strong>Bet ou Fake</strong>, você cola o link e a gente te mostra se ele pertence a uma <strong>casa de apostas legalizada pelo Governo Brasileiro</strong> ✅ ou se <strong>pode ser suspeito</strong> ⚠️.</p><br/>
+						<p>Nosso objetivo é simples: <strong>te ajudar a não cair em ciladas</strong> e apostar só em lugares <strong>seguros e confiáveis</strong> 💪🎰</p>
+					</p>
 				</section>
 
 				<section ref={howRef} className="mb-8" aria-labelledby="how">
@@ -77,12 +81,18 @@ export function Home() {
 				<footer ref={contactRef} className="mt-12 border-t pt-6">
 					<div className="flex flex-col sm:flex-row sm:justify-between items-start">
 						<div>
-							<div className="text-lg font-semibold">VerificaBet</div>
-							<div className="text-sm text-gray-600">contato@example.com</div>
+							<div>
+								<div className="text-lg font-semibold">Última atualização</div>
+								<div className="text-sm text-gray-600">13/11/2025</div>
+							</div>
+							<div className='mt-1'>
+								<div className="text-lg font-semibold">Bet ou Fake</div>
+								<div className="text-sm text-gray-600">contato@example.com</div>
+							</div>
 						</div>
 						<div className="mt-4 sm:mt-0 text-sm text-gray-600">
-							<div>© {new Date().getFullYear()} VerificaBet</div>
-							<button className="mt-2 text-sm text-primary hover:underline" onClick={() => window.scrollTo({top:0, behavior:'smooth'})}>Voltar ao topo</button>
+							<div>© {new Date().getFullYear()} Bet ou Fake</div>
+							{/* <button className="mt-2 text-sm text-primary hover:underline" onClick={() => window.scrollTo({top:0, behavior:'smooth'})}>Voltar ao topo</button> */}
 						</div>
 					</div>
 				</footer>
