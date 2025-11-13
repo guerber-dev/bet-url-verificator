@@ -14,20 +14,20 @@ export function Home() {
 		await checkDomain(input)
 	}
 
-	// const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
-	// 	ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
-	// }
+	const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
+		ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})
+	}
 
 	return (
 		<div className="min-h-screen font-sans text-gray-900 bg-white/90">
 			<header className="w-full sticky top-0 bg-white/90 backdrop-blur-sm z-30 border-b">
 				<div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
 					<img src="/logo.png" alt="VerificaBet" className="h-20 w-auto" />
-					{/* <nav className="space-x-3 text-sm">
+					<nav className="space-x-3 text-sm">
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(aboutRef)}>Sobre</button>
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(howRef)}>Como usar</button>
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(contactRef)}>Contato</button>
-					</nav> */}
+					</nav>
 				</div>
 			</header>
 
@@ -92,7 +92,7 @@ export function Home() {
 						</div>
 						<div className="mt-4 sm:mt-0 text-sm text-gray-600">
 							<div>© {new Date().getFullYear()} Bet ou Fake</div>
-							{/* <button className="mt-2 text-sm text-primary hover:underline" onClick={() => window.scrollTo({top:0, behavior:'smooth'})}>Voltar ao topo</button> */}
+							<button className="mt-2 text-sm text-primary hover:underline" onClick={() => window.scrollTo({top:0, behavior:'smooth'})}>Voltar ao topo</button>
 						</div>
 					</div>
 				</footer>
