@@ -22,7 +22,7 @@ export function Home() {
 		<div className="min-h-screen font-sans text-gray-900 bg-white">
 			<header className="w-full sticky top-0 bg-white/90 backdrop-blur-sm z-30 border-b">
 				<div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-					<div className="text-xl font-semibold">LOGO</div>
+					<img src="/logo.png" alt="VerificaBet" className="h-20 w-auto" />
 					<nav className="space-x-3 text-sm">
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(aboutRef)}>Sobre</button>
 						<button className="px-3 py-2 rounded-md hover:underline" onClick={() => scrollTo(howRef)}>Como usar</button>
@@ -33,7 +33,7 @@ export function Home() {
 
 			<main className="max-w-3xl mx-auto px-4 py-8">
 				<section aria-labelledby="search" className="mb-8">
-					<h1 id="search" className="text-2xl font-bold mb-3">VerificaBet — Consulte um domínio</h1>
+					<h1 id="search" className="text-2xl font-bold mb-3">É Bet ou Fake? — Consulte um  link</h1>
 					<p className="text-sm text-gray-600 mb-4">Cole aqui o link ou domínio que você quer verificar (ex: betnacional.com)</p>
 
 					<form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
