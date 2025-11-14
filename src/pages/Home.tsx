@@ -57,7 +57,7 @@ export function Home() {
 					</h1>
 					<p className='text-sm text-gray-600 mb-4'>
 						Cole aqui o link ou domínio que você quer verificar (ex:
-						betnacional.com)
+						casadeapostaonline.com)
 					</p>
 
 					<form
@@ -72,7 +72,7 @@ export function Home() {
 							className='flex-1 rounded-lg border-2 border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary'
 							id={inputId}
 							onChange={e => setInput(e.target.value)}
-							placeholder='ex: betnacional.com or https://www.betnacional.com'
+							placeholder='ex: casadeapostaonline.com or https://www.casadeapostaonline.com'
 							value={input}
 						/>
 						<button
@@ -186,7 +186,7 @@ function SearchResult({result}: {result: any}) {
 					<div className='font-semibold text-red-700'>Link inválido</div>
 					<div className='text-sm text-red-600'>
 						O link informado não é válido. Verifique se digitou corretamente
-						(ex: betnacional.com).
+						(ex: casadeapostaonline.com).
 					</div>
 				</div>
 			</div>
