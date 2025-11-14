@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router"
+
 export default function Lgpd() {
+	const navigator = useNavigate()
 	return (
 		<div className="max-w-2xl mx-auto px-4 py-8 text-gray-900">
 			<h1 className="text-2xl font-bold mb-4">Política de Privacidade – Bet ou Fake</h1>
@@ -43,6 +46,16 @@ export default function Lgpd() {
 					Caso tenha dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail <a className="text-primary underline" href="mailto:betoufake@gmail.com">betoufake@gmail.com</a>.
 				</p>
 			</div>
+				const navigate = useNavigate()
+				<div className="mt-8">
+					<button
+						type="button"
+						onClick={() => navigator('/')}
+						className="inline-block bg-primary text-white px-5 py-2 rounded-lg font-medium shadow hover:bg-primary/90 transition"
+					>
+						Voltar para Home
+					</button>
+				</div>
 		</div>
 	)
 }
