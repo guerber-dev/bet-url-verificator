@@ -2,8 +2,11 @@
 /** biome-ignore-all lint/correctness/useUniqueElementIds: <explanation> */
 /** biome-ignore-all lint/a11y/useButtonType: <explanation> */
 import type React from 'react'
+import { Link } from 'react-router-dom'
 import {useId, useRef, useState} from 'react'
 import {useBettingChecker} from '../context/BettingCheckerContext'
+import logo from '/logo.png'
+import shield from '/shield.svg'
 
 export function Home() {
 	const {loading, result, checkDomain} = useBettingChecker()
@@ -26,7 +29,7 @@ export function Home() {
 		<div className='min-h-screen font-sans text-gray-900 bg-white/90'>
 			<header className='w-full sticky top-0 bg-white/90 backdrop-blur-sm z-30 border-b'>
 				<div className='max-w-3xl mx-auto px-4 py-4 flex items-center justify-between'>
-					<img alt='VerificaBet' className='h-20 w-auto' src='/logo.png' />
+					<img alt='VerificaBet' className='h-20 w-auto' src={logo} />
 					<nav className='space-x-3 text-sm'>
 						<button
 							className='px-3 py-2 rounded-md hover:underline'
@@ -152,13 +155,12 @@ export function Home() {
 							>
 								Voltar ao topo
 							</button>
-							<a
+							<Link
 								className='mt-2 ml-4 text-sm text-primary hover:underline'
-								href='/lgpd'
-								target='_self'
+								to='/lgpd'
 							>
 								Política de Privacidade
-							</a>
+							</Link>
 						</div>
 					</div>
 						<div className='mt-4'>
@@ -230,7 +232,7 @@ function SearchResult({result}: {result: any}) {
 			<div>
 				<div className='mb-2'>
 					<div className='bg-green-100 border border-green-700 text-green-900 text-xs font-semibold px-3 py-1 rounded-full w-fit flex items-center gap-2'>
-						<img alt='Shield' className='h-5 w-5' src='/shield.svg' />
+						<img alt='Shield' className='h-5 w-5' src={shield} />
 						Plataforma segura
 					</div>
 				</div>
