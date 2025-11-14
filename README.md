@@ -1,40 +1,72 @@
-# Vitamin 2.0
+# Bet ou Fake
 
-![Test workflow](https://github.com/wtchnm/Vitamin/actions/workflows/test.yml/badge.svg) [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/wtchnm/Vitamin/blob/main/LICENSE)
+Verifique se um link de casa de apostas é confiável e autorizado pelo Governo Brasileiro.
 
-Opinionated Vite starter template. Previous version available on v1 branch.
+## Sobre
 
-## Features
+O **Bet ou Fake** é uma ferramenta gratuita que permite consultar rapidamente se um domínio ou link pertence a uma casa de apostas legalizada no Brasil. Basta colar o link ou domínio na barra de busca e o sistema informa se é autorizado, suspeito ou inválido.
 
-- [Vite 6](https://vitejs.dev) with [React 19](https://reactjs.org), [TypeScript 5](https://www.typescriptlang.org) and [absolute imports](https://github.com/aleclarson/vite-tsconfig-paths).
-- [Tailwind CSS v4](https://tailwindcss.com) for easy stylization.
-- [Biome V2](https://next.biomejs.dev) for linting, formatting and automatic import sorting.
-- Write unit and integration tests with [Vitest 3](https://vitest.dev/) and [Testing Library 16](https://testing-library.com/).
-- Write e2e tests with [Playwright 1.52](https://www.cypress.io).
+- Consulta baseada em lista oficial do Governo Brasileiro.
+- Interface simples e responsiva.
+- Não coleta dados pessoais.
+- Utiliza apenas métricas anônimas via Firebase Analytics.
 
-## Getting started
+## Como usar
 
-Use this repository as a [GitHub template](https://github.com/wtchnm/Vitamin/generate) or use [degit](https://github.com/Rich-Harris/degit) to clone to your machine with an empty git history:
+1. Copie o link ou domínio que deseja verificar.
+2. Cole na barra de busca da página inicial.
+3. Clique em "Buscar" para ver o resultado.
 
-```
-npx degit wtchnm/Vitamin#main my-app
-```
+## Resultados possíveis
 
-Then, install the dependencies:
-
-```
-pnpm install
-```
+- **Autorizado**: O domínio pertence a uma casa de apostas legalizada.
+- **Suspeito**: O domínio não está na lista oficial.
+- **Inválido**: O link ou domínio informado não é válido.
 
 ## Scripts
 
-- `pnpm dev` - start a development server with hot reload.
-- `pnpm build` - build for production. The generated files will be on the `dist` folder.
-- `pnpm preview` - locally preview the production build.
-- `pnpm test` - run unit and integration tests related to changed files based on git.
-- `pnpm test:ci` - run all unit and integration tests in CI mode.
-- `pnpm test:e2e` - run all e2e tests with Playwright.
-- `pnpm test:e2e:ci` - run all e2e tests headlessly.
-- `pnpm format` - format all files with Biome Formatter.
-- `pnpm lint` - runs TypeScript and Biome.
-- `pnpm validate` - runs `lint`, `test:ci` and `test:e2e:ci`.
+- `pnpm dev` — inicia o servidor de desenvolvimento com hot reload.
+- `pnpm build` — gera a versão de produção na pasta `dist`.
+- `pnpm preview` — faz preview local do build de produção.
+- `pnpm test` — executa testes unitários e de integração.
+- `pnpm test:ci` — executa todos os testes em modo CI.
+- `pnpm test:e2e` — executa testes e2e com Playwright.
+- `pnpm test:e2e:ci` — executa testes e2e headless.
+- `pnpm format` — formata os arquivos com Biome.
+- `pnpm lint` — verifica o código com TypeScript e Biome.
+- `pnpm validate` — executa lint, testes e2e e unitários.
+
+## Tecnologias
+
+- [Vite 6](https://vitejs.dev) + [React 19](https://react.dev)
+- [TypeScript 5](https://www.typescriptlang.org)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Biome V2](https://biomejs.dev)
+- [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
+- [Playwright](https://playwright.dev/)
+- [Firebase Analytics](https://firebase.google.com/products/analytics)
+
+## Privacidade
+
+Este site não coleta dados pessoais. Apenas métricas anônimas de uso são registradas para aprimorar a experiência. Para mais detalhes, consulte a [Política de Privacidade](/lgpd).
+
+## Estrutura do projeto
+
+```
+├── public/
+│   ├── manifest.webmanifest
+│   ├── mockServiceWorker.js
+│   └── robots.txt
+├── src/
+│   ├── api/betsData.ts
+│   ├── context/BettingCheckerContext.tsx
+│   ├── pages/Home.tsx
+│   ├── pages/lgpd.tsx
+│   ├── shared/config/Analytics/Analytics.ts
+│   ├── shared/config/firebase/
+│   └── global.css
+├── index.html
+├── package.json
+├── tailwind.config.cjs
+└── ...
+```
