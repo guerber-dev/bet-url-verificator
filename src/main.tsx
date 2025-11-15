@@ -16,7 +16,7 @@ if (container) {
 		<StrictMode>
 			<QueryClientProvider client={queryClient}>
 				<ReactQueryDevtools initialIsOpen={false} />
-				<BrowserRouter basename="/">
+				<BrowserRouter basename="/bet-url-verificator">
 					<BettingCheckerProvider>
 						<App />
 					</BettingCheckerProvider>
