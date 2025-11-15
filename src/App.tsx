@@ -5,7 +5,7 @@ import Lgpd from './pages/lgpd'
 export function App() {
 	return (
 		<Routes>
-				<Route element={<Home />} index={true} />
+				<Route path='/' element={<Home />} index={true} />
 				<Route path="/lgpd" element={<Lgpd />} />
 		</Routes>
 	)
